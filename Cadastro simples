@@ -1,0 +1,21 @@
+cadastro = []
+
+print("=== PRIMEIRO CADASTRO ===")
+nome = input("Por favor, escreva seu nome: ")
+idade = input("Por favor, escreva sua idade: ")
+cadastro.append({"nome": nome, "idade": idade})
+
+resposta = "s"
+while resposta == "s":
+  print("Quem mais você gostaria de adicionar?")
+  nome = input("Qual vai ser o nome dessa pessoa? ")
+  idade = input("Qual a idade dessa pessoa? ")
+  cadastro.append({"nome": nome, "idade": idade})
+  resposta = input("Você gostaria de adicionar mais alguém? (s/n): ")
+
+print("\nLista de todos cadastrados:")
+print("------------------------------")
+for p in cadastro:
+  print("Nome:", p["nome"], "| Idade:", p["idade"])
+print("------------------------------")
+print("\nMuito obrigado por fazer seu cadastro!")
